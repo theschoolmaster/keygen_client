@@ -62,7 +62,7 @@ module Keygen
 
     def parse_response(response)
       parsed = response.parsed_response
-      if response.code[0] == 2
+      if response.success?
         parsed
       else
         { error: parsed }
